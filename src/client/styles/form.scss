@@ -1,0 +1,70 @@
+form {
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+input {
+    padding: 10px 20px;
+    width: 85%;
+    line-height: 16px;
+    margin: 10px 0;
+}
+
+.evaluation-container {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+.evaluation-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.evaluation-container p {
+    margin-bottom: 20px;
+    color: #666;
+}
+.url-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+
+}
+.evaluate-button {
+    background-color: #ddceba;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding-bottom: 1.5%;
+    padding-top: 1.7%;
+    cursor: pointer;
+}
+.evaluate-button:hover {
+    background-color: #ddcebad3;
+}
+section{
+    margin: 20px auto;
+}
+
+.result-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+.result-box {
+
+    text-align: center;
+    padding: 15px;
+    color: #634620;
+}
+.result-box soan {
+    margin: 5px 0;
+    text-transform: uppercase;
+}

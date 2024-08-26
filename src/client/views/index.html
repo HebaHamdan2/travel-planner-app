@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>travel</title>
+        <!-- <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+               Travel Planner
+            </div>
+            <div><i class="fas fa-plus"></i> Add Trip</div>
+        </header>
+        <main>
+            <div>
+            <span>Upcoming</span>
+            <span>Old</span>
+            </div>
+
+        </main>
+      <!-- add trip form -->
+        <section>
+            <form id="creat-travel">
+                <label for="country">Where are going?</label>
+                <input type="text" id="country" name="country" required>
+                <i class="fas fa-times"></i>
+                <div class="dates">
+                   When are you going?
+                <input type="date" id="start-date" name="start-date" required>
+                <i class="fas fa-calendar"></i>
+                </div>
+                <button type="submit">Create Trip</button>
+            </form>
+            <div id="results"></div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <span>&copy; 2024 Heba Hamdan. All rights reserved.</span>
+                      </div>
+               
+            </div>
+        </footer>
+        
+        <script>
+//           if ('serviceWorker' in navigator) {
+//     window.addEventListener('load', () => {
+//         const swUrl = '/service-worker.js';
+//         navigator.serviceWorker.register(swUrl)
+//             .then((registration) => {
+//                 console.log('Service Worker registered with scope:', registration.scope);
+//             })
+//             .catch((error) => {
+//                 console.error('Service Worker registration failed:', error);
+//             });
+//     });
+// }
+
+
+//  const logo = document.getElementById('logo');
+//     logo.addEventListener('click', function() {
+//         document.getElementById('text').value = '';
+//         document.getElementById('sentimentResult').innerHTML = '';
+        
+//     });
+     
+     </script>
+        
+        
+    </body>
+    
+</html>

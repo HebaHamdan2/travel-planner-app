@@ -1,0 +1,20 @@
+$footer-background: #222;
+$footer-text-color: #ddd;
+$footer-link-color: $footer-text-color;
+$footer-link-hover-color: lighten($footer-text-color, 20%);
+
+footer {
+    background-color: $footer-background;
+    color: $footer-text-color;
+    padding: 20px;
+    text-align: center;
+   
+}
+.footer-info a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
