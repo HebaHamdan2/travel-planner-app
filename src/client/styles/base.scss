@@ -2,7 +2,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    // background-color: #f6eee3;
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -12,6 +11,14 @@ body {
 main {
     flex: 2;
 }
+main{
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 5%;
+}
+
 
 section {
     max-width: 800px;
@@ -26,7 +33,6 @@ section {
     width: 100px;
     height: auto;
   }
-  /* Add this to your CSS file */
 .trip-card.upcoming {
     border: 2px solid green;
     background-color: #e0ffe0;
@@ -47,7 +53,6 @@ section {
     height: auto;
   }
   
-  /* Initially hide all containers except the default one (today) */
   #today-container {
     display: block;
   }
@@ -57,10 +62,8 @@ section {
     display: none;
   }
   
-  /* Navigation styles */
   .navbar {
     display: flex;
-    background-color: #333;
     padding: 10px;
   }
   
@@ -68,9 +71,5 @@ section {
     color: white;
     padding: 10px;
     text-decoration: none;
-  }
-  
-  .nav-item:hover {
-    background-color: #575757;
   }
   

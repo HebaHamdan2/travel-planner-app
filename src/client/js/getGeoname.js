@@ -12,8 +12,8 @@ export async function GeonamesData(country,depart) {
    console.log(info)
    
    return info;
-
   }
+  
   
 
   

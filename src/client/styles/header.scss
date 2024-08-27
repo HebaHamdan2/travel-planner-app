@@ -1,6 +1,6 @@
 // Variables for colors and fonts
 $primary-color: #ff445b;
-$hover-color: #a5a7ac;
+$hover-color: #ff445aae;
 $header-bg-color: #ffff;
 $text-color: #121430;
 
@@ -25,14 +25,19 @@ header {
       color: $text-color;
       text-decoration: none;
       font-size: 1em;
+      font-weight: 800;
+      text-transform: uppercase;
 
-      &:hover {
+      &:hover,
+      &.active {
         text-decoration: underline;
+       color:#ff445b;
+          
       }
     }
   }
 
-  .add-trip {
+  .add-trip  {
     background-color: $primary-color;
     border: none;
     color: $text-color;
@@ -42,7 +47,8 @@ header {
     display: flex;
     align-items: center;
     gap: 5px;
-
+    font-weight: 600;
+    border-radius: 4px;
     i {
       font-size: 1.2em;
     }

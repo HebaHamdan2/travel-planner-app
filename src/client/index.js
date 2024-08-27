@@ -32,39 +32,15 @@ document.getElementById("create-travel").addEventListener("submit", async functi
   let info=  await GeonamesData(country, startDate); 
   console.log(info)
   saveTripToLocal(info);
+ document.getElementById("country").value='';
+document.getElementById("start-date").value='';
+document.getElementById('overlay').style.display='none';
     alert("Trip details have been processed.");
   } catch (error) {
     console.error("An error occurred:", error);
     alert("An error occurred while processing the trip details.");
   }
 });
-
-async function printWeather(data) {
-  try {
-    console.log(data.countryName)
-    const depart = new Date( await data.depart);
-    const currentDate = new Date();
-    const weather = await data.weather;
-    if(currentDate==depart){
-      console.log(`Weather Description: ${weather.desc}`);
-      console.log(`Temperature: ${weather.temp}°C`);
-      console.log(`Feels Like: ${weather.feelslike}°C`);
-    }else if(currentDate<depart){
-      console.log(`Weather Description: ${weather.desc}`);
-      console.log(`Hight Temprature: ${weather.high}°C`);
-      console.log(`Low Temprature: ${weather.low}°C`);
-    }
-   const ImageUrls=await data.ImageUrls;
-      console.log(ImageUrls[0]);
-      console.log(ImageUrls[1]);
-      console.log(ImageUrls[2]);
-   console.log(depart);   
-
-  } catch (error) {
-      console.error('Error fetching weather data:', error);
-  }
-}
-
 
 // Function to handle navigation clicks
 function handleNavigation() {
@@ -73,11 +49,13 @@ function handleNavigation() {
   const oldContainer = document.getElementById('old-container');
 
   const navItems = document.querySelectorAll('.nav-item');
-
   navItems.forEach(item => {
     item.addEventListener('click', (event) => {
       event.preventDefault();
-      
+      navItems.forEach(nav => nav.classList.remove('active'));
+
+      // Add 'active' class to the clicked nav item
+      item.classList.add('active');
       // Hide all containers
       todayContainer.style.display = 'none';
       upcomingContainer.style.display = 'none';

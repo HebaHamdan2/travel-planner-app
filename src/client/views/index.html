@@ -13,7 +13,7 @@
               Travel Planner
             </div>
             <nav class="navbar">
-              <a href="#today" class="nav-item">Tody</a>
+              <a href="#today" class="nav-item active">Today</a>
               <a href="#upcoming" class="nav-item">Upcoming</a>
               <a href="#old" class="nav-item">Old</a>
             
@@ -31,12 +31,14 @@
           <div id="overlay" class="overlay">
             <section class="form-container">
               <form id="create-travel">
-                <label for="country">Where are you going?</label>
-                <input type="text" id="country" name="country" required>
+                <label >Where are you going?</label>
+                <input type="text" id="country" name="country" placeholder="Enter Your Destination" required>
                 <i class="fas fa-times close-btn"></i>
                 <div class="dates">
-                  When are you going?
-                  <input type="date" id="start-date" name="start-date" required>
+                 
+                  <label>When are you going?</label>
+                  <input type="date" id="start-date"   name="start-date" required>
+                  
                 </div>
                 <button type="submit">Create Trip</button>
               </form>
