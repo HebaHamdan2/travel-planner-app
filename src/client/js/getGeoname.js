@@ -5,12 +5,14 @@ export async function GeonamesData(country,depart) {
    const {lat,lng,countryName}=data.geonames[0];
    let info={
   countryName,
-  weather:Client.WeatherData(lat,lng),
-  ImageUrls: Client.PixabayImage(countryName),
+  weather:Client.WeatherData(lat,lng)||'',
+  ImageUrls: Client.PixabayImage(countryName)||'',
   depart
    }
-   Client.postData(info);
- 
+   console.log(info)
+   
+   return info;
+
   }
   
 

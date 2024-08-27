@@ -13,27 +13,20 @@
               Travel Planner
             </div>
             <nav class="navbar">
+              <a href="#today" class="nav-item">Tody</a>
               <a href="#upcoming" class="nav-item">Upcoming</a>
               <a href="#old" class="nav-item">Old</a>
+            
             </nav>
-            <button class="add-trip">
+            <button class="add-trip" id="add-trip-button">
               <i class="fas fa-plus"></i> Add Trip
             </button>
           </header>
           <main>
-            <section id="upcoming" class="trips-section">
-              <h2>Upcoming Trips</h2>
-              <div class="trip-cards" id="upcoming-cards">
-                <!-- Dynamic content will be inserted here -->
-              </div>
-            </section>
-        
-            <section id="old" class="trips-section">
-              <h2>Old Trips</h2>
-              <div class="trip-cards" id="old-cards">
-                <!-- Dynamic content will be inserted here -->
-              </div>
-            </section>
+            <div id="today-container"></div>
+            <div id="upcoming-container"></div>
+            <div id="old-container"></div>
+            
           </main>
           <div id="overlay" class="overlay">
             <section class="form-container">

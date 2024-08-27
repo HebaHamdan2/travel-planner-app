@@ -4,9 +4,6 @@ export async function WeatherData(lat,lng) {
      response = await fetch(`${Client.apiConfig.weatherbit.url}current?lat=${lat}&lon=${lng}&key=${Client.apiConfig.weatherbit.apiKey}`);
      const data = await response.text();
      const dataObject = JSON.parse(data);
-   console.log( dataObject.data[0].temp)
-   console.log( dataObject.data[0].weather.description)
-   console.log( dataObject.data[0].app_temp)
    let weather={
     temp:dataObject.data[0].temp,
     feelslike:dataObject.data[0].app_temp,
@@ -14,7 +11,7 @@ export async function WeatherData(lat,lng) {
    }
    return weather;
 
-    }else {
+    }else if(Client.daysRemaining>'0') {
     response = await fetch(`${Client.apiConfig.weatherbit.url}forecast/daily?lat=${lat}&lon=${lng}&days=${Client.daysRemaining+1}&key=${Client.apiConfig.weatherbit.apiKey}`);
     const data = await response.text();
     console.log(Client.daysRemaining)
@@ -27,11 +24,13 @@ let{low_temp,high_temp}=resObject;
 let{description}=resObject.weather;
     console.log(high_temp,low_temp,description)//should be sent to backend and display it as upcoming trip
     let weather={
-      high_temp,
-      feelslike:low_temp,
+     high: high_temp,
+     low: low_temp,
       desc:description
      }
      return weather;
+  }else{
+    return;
   }
 
 

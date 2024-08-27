@@ -17,38 +17,60 @@ section {
     max-width: 800px;
     margin: 50px auto;
 }
-#loadingIndicator {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-    z-index: 1000;
-    font-size: 18px;
-    text-align: center;}
-    
-#toastContainer {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
-    max-width: 300px;
-}
 
-.toast {
+
+  .trip-card.old {
+    border: 2px solid red;
+  }
+  .trip-card img {
+    width: 100px;
+    height: auto;
+  }
+  /* Add this to your CSS file */
+.trip-card.upcoming {
+    border: 2px solid green;
+    background-color: #e0ffe0;
+  }
+  
+  .trip-card.old {
+    border: 2px solid red;
+    background-color: #ffe0e0;
+  }
+  
+  .trip-card.today {
+    border: 2px solid blue;
+    background-color: #e0e0ff;
+  }
+  
+  .trip-card img {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Initially hide all containers except the default one (today) */
+  #today-container {
+    display: block;
+  }
+  
+  #upcoming-container,
+  #old-container {
+    display: none;
+  }
+  
+  /* Navigation styles */
+  .navbar {
+    display: flex;
     background-color: #333;
-    color: #fff;
     padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.toast.show {
-    opacity: 1;
-}
+  }
+  
+  .nav-item {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .nav-item:hover {
+    background-color: #575757;
+  }
+  
