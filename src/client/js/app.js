@@ -3,20 +3,20 @@ const serverURL = 'http://localhost:8081/api/getKeys';
 // Initialize apiConfig without keys 
 export let apiConfig = {
   geonames: {
-    url: 'https://secure.geonames.org/',
+    url:'',
     username: ''
   },
   weatherbit: {
-    url: 'https://api.weatherbit.io/v2.0/',
+    url: '',
     apiKey: ''
   },
   pixabay: {
-    url: 'https://pixabay.com/api/',
+    url: '',
     apiKey: ''
   }
 };
 
-async function fetchKeys() {
+export async function fetchKeys() {
   try {
     const response = await fetch(serverURL);
     
@@ -27,12 +27,15 @@ async function fetchKeys() {
     const data = await response.json();
     apiConfig = {
       geonames: {
+        url: 'https://secure.geonames.org/',
         username: data.username 
       },
       weatherbit: {
+        url: 'https://api.weatherbit.io/v2.0/',
         apiKey: data.weatherKey
       },
       pixabay: {
+        url: 'https://pixabay.com/api/',
         apiKey: data.pixabayKey 
       }
     };
@@ -44,4 +47,4 @@ async function fetchKeys() {
   }
 }
 
-fetchKeys();
+

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>travel</title>
+        <title>Travel Planner </title>
         <!-- <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -10,32 +10,46 @@
     <body>
         <header>
             <div class="logo">
-               Travel Planner
+              Travel Planner
             </div>
-            <div><i class="fas fa-plus"></i> Add Trip</div>
-        </header>
-        <main>
-            <div>
-            <span>Upcoming</span>
-            <span>Old</span>
-            </div>
-
-        </main>
-      <!-- add trip form -->
-        <section>
-            <form id="creat-travel">
-                <label for="country">Where are going?</label>
+            <nav class="navbar">
+              <a href="#upcoming" class="nav-item">Upcoming</a>
+              <a href="#old" class="nav-item">Old</a>
+            </nav>
+            <button class="add-trip">
+              <i class="fas fa-plus"></i> Add Trip
+            </button>
+          </header>
+          <main>
+            <section id="upcoming" class="trips-section">
+              <h2>Upcoming Trips</h2>
+              <div class="trip-cards" id="upcoming-cards">
+                <!-- Dynamic content will be inserted here -->
+              </div>
+            </section>
+        
+            <section id="old" class="trips-section">
+              <h2>Old Trips</h2>
+              <div class="trip-cards" id="old-cards">
+                <!-- Dynamic content will be inserted here -->
+              </div>
+            </section>
+          </main>
+          <div id="overlay" class="overlay">
+            <section class="form-container">
+              <form id="create-travel">
+                <label for="country">Where are you going?</label>
                 <input type="text" id="country" name="country" required>
-                <i class="fas fa-times"></i>
+                <i class="fas fa-times close-btn"></i>
                 <div class="dates">
-                   When are you going?
-                <input type="date" id="start-date" name="start-date" required>
-                <i class="fas fa-calendar"></i>
+                  When are you going?
+                  <input type="date" id="start-date" name="start-date" required>
                 </div>
                 <button type="submit">Create Trip</button>
-            </form>
-            <div id="results"></div>
-        </section>
+              </form>
+            </section>
+          </div>
+   
 
         <footer>
             <div class="footer-content">
@@ -67,7 +81,29 @@
 //         document.getElementById('sentimentResult').innerHTML = '';
         
 //     });
-     
+document.addEventListener('DOMContentLoaded', () => {
+  const addTripButton = document.querySelector('.add-trip');
+  const overlay = document.getElementById('overlay');
+  const closeButton = document.querySelector('.close-btn');
+
+  // Show the overlay
+  addTripButton.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+  });
+
+  // Hide the overlay
+  closeButton.addEventListener('click', () => {
+    overlay.style.display = 'none';
+  });
+
+  // Close overlay when clicking outside the form
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) {
+      overlay.style.display = 'none';
+    }
+  });
+});
+
      </script>
         
         

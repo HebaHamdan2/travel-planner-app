@@ -7,6 +7,12 @@ export async function WeatherData(lat,lng) {
    console.log( dataObject.data[0].temp)
    console.log( dataObject.data[0].weather.description)
    console.log( dataObject.data[0].app_temp)
+   let weather={
+    temp:dataObject.data[0].temp,
+    feelslike:dataObject.data[0].app_temp,
+    desc:dataObject.data[0].weather.description
+   }
+   return weather;
 
     }else {
     response = await fetch(`${Client.apiConfig.weatherbit.url}forecast/daily?lat=${lat}&lon=${lng}&days=${Client.daysRemaining+1}&key=${Client.apiConfig.weatherbit.apiKey}`);
@@ -20,6 +26,12 @@ console.log(resObject)
 let{low_temp,high_temp}=resObject;
 let{description}=resObject.weather;
     console.log(high_temp,low_temp,description)//should be sent to backend and display it as upcoming trip
+    let weather={
+      high_temp,
+      feelslike:low_temp,
+      desc:description
+     }
+     return weather;
   }
 
 

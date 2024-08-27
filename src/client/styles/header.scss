@@ -1,17 +1,54 @@
+// Variables for colors and fonts
+$primary-color: #ff445b;
+$hover-color: #a5a7ac;
+$header-bg-color: #ffff;
+$text-color: #121430;
+
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $header-bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .navbar {
     display: flex;
-    padding: 10px 40px;
-     align-items: center;
-     justify-content: center;
-  
-}
-#logo{
-    width: 45%;
-    height: 100%;
+    gap: 20px;
+
+    .nav-item {
+      color: $text-color;
+      text-decoration: none;
+      font-size: 1em;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .add-trip {
+    background-color: $primary-color;
+    border: none;
+    color: $text-color;
+    padding: 10px 20px;
+    font-size: 1em;
     cursor: pointer;
-    
-}
-.logo{
-    width: 45%;
-    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    i {
+      font-size: 1.2em;
+    }
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
 }

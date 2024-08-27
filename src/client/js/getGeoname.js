@@ -1,10 +1,16 @@
 
-export async function GeonamesData(country) {
-    const response = await fetch(`${Client.apiConfig.geonames.url}searchJSON?q=${country}&maxRows=10&username=${Client.apiConfig.username}`);
+export async function GeonamesData(country,depart) {
+    const response = await fetch(`${Client.apiConfig.geonames.url}searchJSON?q=${country}&maxRows=10&username=heba`);
     const data = await response.json();
    const {lat,lng,countryName}=data.geonames[0];
-    Client.WeatherData(lat,lng)
-    Client.PixabayImage(countryName);
+   let info={
+  countryName,
+  weather:Client.WeatherData(lat,lng),
+  ImageUrls: Client.PixabayImage(countryName),
+  depart
+   }
+   Client.postData(info);
+ 
   }
   
 
