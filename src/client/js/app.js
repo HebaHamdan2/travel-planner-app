@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 const serverURL = "http://localhost:8081/api/getKeys";
 
 // Initialize apiConfig without keys 
@@ -39,8 +40,6 @@ export async function fetchKeys() {
         apiKey: data.pixabayKey,
       },
     };
-
-    // console.log('API Configuration:', apiConfig);
   } catch (error) {
     Swal.fire({
       title: "Error!",
@@ -48,6 +47,6 @@ export async function fetchKeys() {
       icon: "error",
       confirmButtonText: "OK",
     });
-    console.error("Error fetching API configuration:", error);
+
   }
 }

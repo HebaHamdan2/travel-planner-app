@@ -10,7 +10,6 @@ export async function GeonamesData(country, depart) {
     ImageUrls: Client.PixabayImage(countryName) || "",
     depart,
   };
-//   console.log(info);
 
   return info;
 }
