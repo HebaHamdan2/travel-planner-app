@@ -31,7 +31,7 @@ The **Travel Planner App** is a project developed as part of the Udacity Nanodeg
   - **Weatherbit API:** To fetch weather data based on latitude and longitude obtained from the Geonames API.
   - **Pixabay API:** To get images for destinations or countries.
   - **Geonames API:** To retrieve latitude and longitude for locations.
-  - 
+    
 - **Alerts**: 
   - **SweetAlert2**: For displaying stylish alerts.
 
@@ -47,7 +47,7 @@ The **Travel Planner App** is a project developed as part of the Udacity Nanodeg
    npm install
    ```
 3. **Set Up Environment Variables**
-Create a .env file in the root of your project directory with the following content:
+- Create a .env file in the root of your project directory with the following content:
    ```bash
      PIXABAY_API_KEY=your_pixabay_key
      WEATHERBIT_API_KEY=your_weatherbit_key
