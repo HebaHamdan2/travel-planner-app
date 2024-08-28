@@ -32,4 +32,34 @@ The **Travel Planner App** is a project developed as part of the Udacity Nanodeg
 
    ```bash
    git clone https://github.com/HebaHamdan2/travel-planner-app.git
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+## Scripts
+- Start the Server:
+```bash
+npm start
+```
+- Build for Production:
+```bash
+npm run build-prod
+```
+- Build for Development:
+```bash
+npm run build-dev
+```
+- Run Server-Side Tests:
+```bash
+npm run test:server
+```
+- Run Client-Side Tests:
+```bash
+npm run test:client
+```
+- Run All Tests:
+```bash
+npm test
+```
 
