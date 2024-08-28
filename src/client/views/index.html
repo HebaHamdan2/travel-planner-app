@@ -57,18 +57,18 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <script>
-//           if ('serviceWorker' in navigator) {
-//     window.addEventListener('load', () => {
-//         const swUrl = '/service-worker.js';
-//         navigator.serviceWorker.register(swUrl)
-//             .then((registration) => {
-//                 console.log('Service Worker registered with scope:', registration.scope);
-//             })
-//             .catch((error) => {
-//                 console.error('Service Worker registration failed:', error);
-//             });
-//     });
-// }
+          if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        const swUrl = '/service-worker.js';
+        navigator.serviceWorker.register(swUrl)
+            .then((registration) => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+                console.error('Service Worker registration failed:', error);
+            });
+    });
+}
   </script>
         
         
