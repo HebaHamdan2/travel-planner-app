@@ -2,6 +2,9 @@
 
 The **Travel Planner App** is a project developed as part of the Udacity Nanodegree program. This app allows users to add, store, and manage their trips, whether they are today, upcoming or past trips. It features the ability to view weather forecasts for departure dates using the  [Weatherbit](https://www.weatherbit.io/api/) API and to get images of destinations using the [Pixabay](https://pixabay.com/service/about/api/) API. The application is built with many web technologies and includes both client-side and server-side testing.
 
+![Screenshot (1281)](https://github.com/user-attachments/assets/e7c9fe8b-d266-441c-97af-e1f476f39641)
+
+
 ## Features
 
 - **Add and Manage Trips**: Users can add, view, and delete trips.
