@@ -12,6 +12,7 @@ import "./styles/base.scss";
 import "./styles/footer.scss";
 import "./styles/form.scss";
 import "./styles/header.scss";
+import "./media/responsive.scss";
 document.addEventListener("DOMContentLoaded", () => {
   const addTripButton = document.querySelector(".add-trip");
   const overlay = document.getElementById("overlay");

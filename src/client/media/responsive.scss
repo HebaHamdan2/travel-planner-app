@@ -1,0 +1,22 @@
+@media (max-width: 884px) {
+    main {
+        width: 100%;
+    }
+
+}
+@media (max-width: 700px) {
+    main {
+        width: 90%;
+    }
+    header{
+        width: 80%;
+        margin: auto;
+    }
+}
+@media (max-width:555px) {
+    header{
+       margin-right: 100%;
+        width: 60%;
+    }
+    
+}
