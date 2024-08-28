@@ -1,5 +1,10 @@
 //  JavaScript compiler. Babel converts modern JavaScript code into a version that is compatible with older browsers or environments. This process is necessary because not all JavaScript features are supported in all environments.
 {
-    "presets": ["@babel/preset-env"]
+    "presets": [
+      "@babel/preset-env"//to  make sure that features like arrow functions, classes, template literals, and other ES6+ syntax are converted to syntax that older environments can understand.
+    ],
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs"//Older versions of Jest or Jest configurations that don’t support ES modules directly will require Babel to transpile these modules so Jest can understand them.
+    ]
   }
   

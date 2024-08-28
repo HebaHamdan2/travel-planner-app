@@ -1,15 +1,14 @@
-import { apiConfig, fetchKeys } from '../src/client/js/app.js'; // Adjust path as needed
-import Swal from 'sweetalert2'; // Import SweetAlert2 to mock
+import { apiConfig, fetchKeys } from '../src/client/js/app.js'; 
+import Swal from 'sweetalert2'; 
 
-// Mock Swal before running tests
 jest.mock('sweetalert2', () => ({
   fire: jest.fn(),
 }));
 
 describe('Client API Fetch', () => {
   beforeEach(() => {
-    jest.resetAllMocks(); // Reset mocks before each test
-    global.fetch = jest.fn(); // Mock global fetch
+    jest.resetAllMocks(); 
+    global.fetch = jest.fn(); 
   });
 
   test('should update apiConfig on successful fetch', async () => {
