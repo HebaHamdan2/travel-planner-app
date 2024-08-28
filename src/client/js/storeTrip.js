@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 // Save trip data to local storage
 export async function saveTripToLocal(data) {
     try {
@@ -30,7 +31,7 @@ export async function saveTripToLocal(data) {
       localStorage.setItem('tripData', JSON.stringify(tripArray));
   
       // Show success alert
-      Client.Swal.fire({
+      Swal.fire({
         title: 'Success!',
         text: 'Your trip has been saved successfully.',
         icon: 'success',
@@ -42,7 +43,7 @@ export async function saveTripToLocal(data) {
   
     } catch (error) {
       console.error('Error saving trip data:', error);
-      Client.Swal.fire({
+    Swal.fire({
         title: 'Error!',
         text: 'There was an error saving your trip. Please try again.',
         icon: 'error',

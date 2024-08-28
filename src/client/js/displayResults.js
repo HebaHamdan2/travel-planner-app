@@ -1,5 +1,15 @@
 // Function to display trip data
 import Swal from "sweetalert2";
+
+// Function to show the spinner
+function showSpinner() {
+  document.getElementById('spinner').style.display = 'block';
+}
+
+// Function to hide the spinner
+function hideSpinner() {
+  document.getElementById('spinner').style.display = 'none';
+}
 export function displayTripData() {
   const todayscontainer = document.getElementById('today-container');
   const upcomingscontainer = document.getElementById('upcoming-container');
@@ -95,20 +105,22 @@ export function displayTripData() {
         cancelButtonText: 'No, cancel!',
       }).then((result) => {
         if (result.isConfirmed) {
-          // Remove trip from local storage
-          let tripArray = JSON.parse(localStorage.getItem('tripData')) || [];
-          tripArray = tripArray.filter(trip => trip.id !== Number(id));
-          localStorage.setItem('tripData', JSON.stringify(tripArray));
+          showSpinner(); // Show the spinner
 
-          // Show success alert
+          setTimeout(() => { // Simulate network delay
+            let tripArray = JSON.parse(localStorage.getItem('tripData')) || [];
+            tripArray = tripArray.filter(trip => trip.id !== Number(id));
+            localStorage.setItem('tripData', JSON.stringify(tripArray));
+
           Swal.fire(
-            'Removed!',
-            'Your trip has been removed.',
-            'success'
-          );
+              'Removed!',
+              'Your trip has been removed.',
+              'success'
+            );
 
-          // Redisplay updated data
-          displayTripData();
+            displayTripData();
+            hideSpinner(); // Hide the spinner
+          }, 1000); // Adjust the delay as needed
         }
       });
     });
