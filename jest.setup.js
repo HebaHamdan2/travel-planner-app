@@ -1,5 +1,3 @@
-// jest.setup.js
-
 // Mock the global Client object
 global.Client = {
     apiConfig: {

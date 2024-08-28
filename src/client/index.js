@@ -12,7 +12,7 @@ import "./styles/base.scss";
 import "./styles/footer.scss";
 import "./styles/form.scss";
 import "./styles/header.scss";
-import "./media/responsive.scss";
+import "./styles/responsive.scss";
 
 // Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {

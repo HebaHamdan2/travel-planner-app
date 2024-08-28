@@ -118,8 +118,8 @@ export function displayTripData() {
             );
 
             displayTripData();
-            hideSpinner(); // Hide the spinner
-          }, 1000); // Adjust the delay as needed
+            hideSpinner(); 
+          }, 1000); 
         }
       });
     });

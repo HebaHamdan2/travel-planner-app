@@ -18,5 +18,18 @@
        margin-right: 100%;
         width: 60%;
     }
-    
+       header .logo{
+        font-size: 1em;
+       }
+       header .add-trip{
+        padding: 6px 1px;
+        font-size: 0.7em;
+       }
+       header .navbar .nav-item {
+        font-size: 0.7em;
+       }
+       header .navbar {
+        gap: 8px;
+    }
+  
 }

@@ -23,7 +23,6 @@ export async function PixabayImage(query) {
       return [];
     }
   } catch (error) {
-    // Log error and return an empty array
     // console.error('Error fetching data from Pixabay:', error);
     return [];
   }
