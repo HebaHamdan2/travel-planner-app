@@ -12,7 +12,7 @@ main {
     flex: 2;
 }
 main{
-    width: 80%;
+    width: 70%;
     margin: auto;
     align-items: center;
     text-align: center;
@@ -26,31 +26,26 @@ section {
 }
 
 
-  .trip-card.old {
-    border: 2px solid red;
+.trip-card.upcoming,  .trip-card.old,  .trip-card.today {
+    border: 2px solid #ff445a0e;
+    // background-color: #ff445a0e;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1rem;
   }
-  .trip-card img {
-    width: 100px;
-    height: auto;
+  .trip-card h2{
+font-size: 20px;
   }
-.trip-card.upcoming {
-    border: 2px solid green;
-    background-color: #e0ffe0;
-  }
-  
-  .trip-card.old {
-    border: 2px solid red;
-    background-color: #ffe0e0;
-  }
-  
-  .trip-card.today {
-    border: 2px solid blue;
-    background-color: #e0e0ff;
-  }
+
+
   
   .trip-card img {
-    width: 100px;
-    height: auto;
+    width: 250px;
+    height: 300px;
+    margin-right: 4px;
+    padding: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   }
   
   #today-container {
@@ -60,6 +55,8 @@ section {
   #upcoming-container,
   #old-container {
     display: none;
+ 
+
   }
   
   .navbar {
@@ -72,4 +69,17 @@ section {
     padding: 10px;
     text-decoration: none;
   }
-  
+  .delete{
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding:  9px 8px;
+    background-color: #ff445b;
+    border: none;
+    border-radius: 4px;
+  }
+.delete:hover{
+  background-color: #ff445aab;
+
+}
+

@@ -11,10 +11,13 @@ header {
   background-color: $header-bg-color;
   color: $text-color;
   padding: 10px 20px;
+  width: 80%;
+  margin: auto;
 
   .logo {
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: bold;
+    cursor: pointer;
   }
 
   .navbar {
@@ -41,7 +44,7 @@ header {
     background-color: $primary-color;
     border: none;
     color: $text-color;
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-size: 1em;
     cursor: pointer;
     display: flex;

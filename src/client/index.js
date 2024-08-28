@@ -3,6 +3,7 @@ import { apiConfig, fetchKeys } from "./js/app.js";
 import { GeonamesData } from "./js/getGeoname.js";
 import { PixabayImage } from "./js/getPixabayImage.js";
 import { WeatherData } from "./js/getWeatherbit.js";
+import Swal from 'sweetalert2';
 import {saveTripToLocal,displayTripData} from "./js/displayResults.js"
 // sass files
 import "./styles/resets.scss";
@@ -35,9 +36,8 @@ document.getElementById("create-travel").addEventListener("submit", async functi
  document.getElementById("country").value='';
 document.getElementById("start-date").value='';
 document.getElementById('overlay').style.display='none';
-    alert("Trip details have been processed.");
+    // alert("Trip details have been processed.");
   } catch (error) {
-    console.error("An error occurred:", error);
     alert("An error occurred while processing the trip details.");
   }
 });
@@ -80,5 +80,5 @@ export {
   PixabayImage,
   WeatherData,
   daysRemaining,
-  saveTripToLocal,displayTripData
+  saveTripToLocal,displayTripData,Swal
 };
