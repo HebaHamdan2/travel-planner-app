@@ -7,6 +7,7 @@ The **Travel Planner App** is a project developed as part of the Udacity Nanodeg
 - **Add and Manage Trips**: Users can add, view, and delete trips.
 - **Weather Forecast**: Displays weather forecasts for the departure date using the Weatherbit API.
 - **Destination Images**: Fetches images of destinations or countries using the Pixabay API.
+- **Local Storage**: Trips data is stored in the browser's local storage, allowing data persistence across sessions.
 - **Alerts**: Utilizes SweetAlert2 for interactive and user-friendly alerts.
 
 ## Tech Stack
