@@ -1,13 +1,12 @@
 // Function to display trip data
 import Swal from "sweetalert2";
 
-// Function to show the spinner
-function showSpinner() {
+export function showSpinner() {
   document.getElementById('spinner').style.display = 'block';
 }
 
 // Function to hide the spinner
-function hideSpinner() {
+export function hideSpinner() {
   document.getElementById('spinner').style.display = 'none';
 }
 export function displayTripData() {

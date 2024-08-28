@@ -4,7 +4,7 @@ import { GeonamesData } from "./js/getGeoname.js";
 import { PixabayImage } from "./js/getPixabayImage.js";
 import { WeatherData } from "./js/getWeatherbit.js";
 import Swal from "sweetalert2";
-import { displayTripData } from "./js/displayResults.js";
+import { displayTripData,showSpinner, hideSpinner} from "./js/displayResults.js";
 import { saveTripToLocal } from './js/storeTrip.js';
 // sass files
 import "./styles/resets.scss";
@@ -118,5 +118,5 @@ export {
   WeatherData,
   daysRemaining,
   saveTripToLocal,
-  displayTripData
+  displayTripData,showSpinner,hideSpinner
 };
