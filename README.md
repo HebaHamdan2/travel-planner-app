@@ -1,6 +1,9 @@
 # Travel Planner App
 
-The **Travel Planner App** is a project developed as part of the Udacity Nanodegree program. This app allows users to add, store, and manage their trips, whether they are today, upcoming or past trips. It features the ability to view weather forecasts for departure dates using the Weatherbit API and to get images of destinations using the Pixabay API. The application is built with modern web technologies and includes both client-side and server-side testing.
+The **Travel Planner App** is a project developed as part of the Udacity Nanodegree program. This app allows users to add, store, and manage their trips, whether they are today, upcoming or past trips. It features the ability to view weather forecasts for departure dates using the  [Weatherbit](https://www.weatherbit.io/api/) API and to get images of destinations using the [Pixabay](https://pixabay.com/service/about/api/) API. The application is built with many web technologies and includes both client-side and server-side testing.
+
+![Screenshot (1281)](https://github.com/user-attachments/assets/e7c9fe8b-d266-441c-97af-e1f476f39641)
+
 
 ## Features
 
@@ -24,6 +27,11 @@ The **Travel Planner App** is a project developed as part of the Udacity Nanodeg
 - **Testing**: 
   - **Jest**: For unit and integration testing.
   - **Supertest**: For testing HTTP requests.
+- **APIs:**
+  - **Weatherbit API:** To fetch weather data based on latitude and longitude obtained from the Geonames API.
+  - **Pixabay API:** To get images for destinations or countries.
+  - **Geonames API:** To retrieve latitude and longitude for locations.
+    
 - **Alerts**: 
   - **SweetAlert2**: For displaying stylish alerts.
 
@@ -38,6 +46,13 @@ The **Travel Planner App** is a project developed as part of the Udacity Nanodeg
    ```bash
    npm install
    ```
+3. **Set Up Environment Variables**
+- Create a .env file in the root of your project directory with the following content:
+   ```bash
+     PIXABAY_API_KEY=your_pixabay_key
+     WEATHERBIT_API_KEY=your_weatherbit_key
+     GEONAMES=your-Geaonnames-username
+
 ## Scripts
 - Start the Server:
 ```bash
