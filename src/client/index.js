@@ -1,10 +1,9 @@
-// js files
 import { apiConfig, fetchKeys } from "./js/app.js";
 import { GeonamesData } from "./js/getGeoname.js";
 import { PixabayImage } from "./js/getPixabayImage.js";
 import { WeatherData } from "./js/getWeatherbit.js";
 import Swal from "sweetalert2";
-import { displayTripData,showSpinner, hideSpinner} from "./js/displayResults.js";
+import { displayTripData, showSpinner, hideSpinner } from "./js/displayResults.js";
 import { saveTripToLocal } from './js/storeTrip.js';
 // sass files
 import "./styles/resets.scss";
@@ -13,7 +12,7 @@ import "./styles/footer.scss";
 import "./styles/form.scss";
 import "./styles/header.scss";
 import "./styles/responsive.scss";
-
+let daysRemaining;
 // Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   const addTripButton = document.querySelector(".add-trip");
@@ -47,7 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
   handleNavigation();
 });
 
-let daysRemaining = 0;
+const MAX_DAYS_AHEAD = 16; // Maximum number of days allowed in the future
+const today = new Date();
 
 // Check if element exists before adding event listener
 const createTravelForm = document.getElementById("create-travel");
@@ -56,10 +56,19 @@ if (createTravelForm) {
     event.preventDefault();
     const country = document.getElementById("country").value;
     const startDate = new Date(document.getElementById("start-date").value);
-    const currentDate = new Date();
-    const diffInMs = startDate - currentDate;
+    const diffInMs = startDate - today;
     const msPerDay = 24 * 60 * 60 * 1000;
     daysRemaining = Math.ceil(diffInMs / msPerDay);
+
+    if (daysRemaining > MAX_DAYS_AHEAD) {
+      Swal.fire({
+        title: "Date Error",
+        text: `You cannot add a trip more than ${MAX_DAYS_AHEAD} days in advance. Please select a closer date.`,
+        icon: "warning",
+        confirmButtonText: "OK",
+      });
+      return;
+    }
 
     try {
       await fetchKeys();
@@ -116,7 +125,9 @@ export {
   GeonamesData,
   PixabayImage,
   WeatherData,
-  daysRemaining,
   saveTripToLocal,
-  displayTripData,showSpinner,hideSpinner
+  displayTripData,
+  showSpinner,
+  hideSpinner,
+  daysRemaining
 };

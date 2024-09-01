@@ -21,6 +21,7 @@ app.get("/api/getKeys", (req, res) => {
     weatherKey: process.env.WEATHERBIT_API_KEY,
     pixabayKey: process.env.PIXABAY_API_KEY,
   };
+ 
   res.json(apiKeys);
 });
 // Serve the index.html file from the 'dist' directory

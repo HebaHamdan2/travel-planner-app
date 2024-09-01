@@ -1,10 +1,8 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import webpack from 'webpack';
 import { fileURLToPath } from 'url';
 
-// Resolve __dirname and __filename
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -48,14 +46,15 @@ export default {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/client/views/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
+            favicon: './src/client/public/favicon.ico'
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
         }),
     ],
     devServer: {
-        port: 5000, // Changed to a safer port
+        port: 5000,
         hot: true,
         proxy: [
             {
