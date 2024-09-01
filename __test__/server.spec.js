@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals';
 import request from 'supertest';
 import express from 'express';
 import dotenv from 'dotenv';
@@ -21,7 +22,6 @@ app.get("/api/getKeys", (req, res) => {
   res.json(apiKeys);
 });
 
-
 const server = app.listen(port);
 
 describe('Express Server', () => {
@@ -36,6 +36,4 @@ describe('Express Server', () => {
     expect(response.body).toHaveProperty('weatherKey');
     expect(response.body).toHaveProperty('pixabayKey');
   });
-
-
 });
