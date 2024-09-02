@@ -34,7 +34,13 @@ The **Travel Planner App** is a project developed as part of the Udacity Nanodeg
     
 - **Alerts**: 
   - **SweetAlert2**: For displaying stylish alerts.
+## Node Version
 
+Ensure you are using Node.js version `v18.16.1` for compatibility:
+
+```bash
+node -v
+```
 ## Installation
 
 1. **Clone the repository:**
