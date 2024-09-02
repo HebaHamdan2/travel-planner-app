@@ -20,7 +20,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "sweetalert2": "^11.11.0" 
+    "sweetalert2": "^11.4.8" 
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
